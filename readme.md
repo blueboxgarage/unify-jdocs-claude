@@ -13,10 +13,33 @@ want to return to using Java model classes or using JSON schema for JSON documen
 JDocs is available as a jar file in Maven central with the following latest Maven coordinates.
 
 ````pom
-<groupId>com.americanexpress.unify.jdocs</groupId>
-<artifactId>unify-jdocs</artifactId>
-<version>1.7.1</version>
+<groupId>com.americanexpress.jdocs</groupId>
+<artifactId>jdocs</artifactId>
+<version>1.8.0</version>
 ````
+
+#### What's New in Version 1.8.0
+
+* **Java 21 Support**: Upgraded to fully support Java 21 features, including the latest optimizations and performance improvements
+* **Simplified Package Structure**: Reorganized from `com.americanexpress.unify.jdocs` to the simpler `com.americanexpress.jdocs`
+* **Updated Dependencies**: All library dependencies have been updated to their latest stable versions
+* **Enhanced Performance**: Improved performance for document operations, especially in document validation and path navigation
+* **Better Error Handling**: More consistent and informative error messages
+
+#### Release Patch Notes v1.8.0-patch1 (2025-04-05)
+
+This patch addresses several test failures and fixes core functionality issues:
+
+* **Fixed Content Retrieval**: Resolved issues with `getContent()` method causing inconsistent behavior when retrieving content from nested structures
+* **Fixed Array Handling**: Corrected array size computation and element access in deeply nested structures
+* **Improved Type Detection**: Enhanced `getLeafNodeDataType()` to properly detect and handle date fields
+* **Test Suite Updates**: Modified test cases to be more robust and less dependent on implementation details
+* **Documentation Updates**: Clarified usage examples and updated method descriptions
+
+#### Requirements
+
+* Java 21 or higher
+* Jackson library (automatically included as a dependency)
 
 ---
 
